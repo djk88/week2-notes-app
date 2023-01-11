@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note-App</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <form action="addNotes" method="post"></form>
+    <input type="text" name="title" placeholder="title" />
+    <input type="text" name="content" placeholder="content" />
+
+    <ul>
+        <% for (let i=0; i < notes.length; i++) {%>
+            <li>
+                <h2>
+                    <%= notes[i].title %>
+                </h2>
+                <p>
+                    <%= notes[i].content %>
+                </p>
+            </li>
+            <% } %>
+    </ul>
+    <form action="deleteNotes" method="delete"></form>
+
+</body>
+
+</html>
